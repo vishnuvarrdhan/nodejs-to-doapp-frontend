@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>ToDo || ViewTodo</title>
+  </head>
+  <body>
+    <header>
+    <div id="nav">
+  </div>
+</header>
+<div class="main" id="main">
+  {{#if result}}
+  <div class="singlehome">
+    <label class="description">Todo:</label>
+    <label class= "result">{{ result.text }}</label></br>
+    <label class="description">Completed:</label>
+    <label class= {{result.class}}>{{ result.completed }}</label></br>
+    {{#if result.completedAt }}
+    <label class="description">Completed At:</label>
+    <label class= "result">{{ result.completedAt }}</label>
+    {{/if}}
+    <td>
+    <form action="/delete" method="get">
+      <button class="singlebtn" formaction="/update" name='update' value='{{result._id}}'>update</button>
+      <button class="singlebtn" name='delete' type='submit'  value='{{result._id}}'>delete</button>
+    </form>
+  </td>
+    <!-- <button type="submit"  class="btn">login</button> -->
+  </div>
+{{/if}}
+</div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function(){
+         jQuery("#nav").load("/navigationbar/nav.hbs");
+     });
+  </script>
+</html>

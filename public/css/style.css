@@ -1,0 +1,173 @@
+/*REFER: https://www.youtube.com/watch?v=XZsuI5wyRzs*/
+body,html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+p{
+  color: red;
+  padding-left: 30px;
+}
+a:link {
+    text-decoration: none;
+}
+nav{
+  width: 100%;
+  background: #00316b;
+  position: fixed;
+  top: 0;
+}
+ul{
+width: 80%;
+margin: 0 auto;
+padding: 0;
+}
+ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 20px;
+}
+ul li:hover{
+   background: #e91e63;
+}
+ul li a{
+  color: #fff;
+  text-decoration: none;
+}
+.toggle{
+  width: 100%;
+  padding: 10px 20px;
+  background: #001f44;
+  text-align: right;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 30px;
+  display: none
+}
+@media (max-width:768px)
+{
+  .toggle
+  {
+    display: block;
+  }
+  ul{
+    width: 100%;
+    display: none;
+  }
+  ul li {
+    display: block;
+    text-align: center;
+  }
+  .active{
+    display: block;
+  }
+}
+
+#success{
+  color: green;
+  padding-left: 30px;
+}
+.d1{
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  float: left;
+  background: url(../images/theme.png) no-repeat center;
+  background-size: cover;
+}
+
+.login{
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  right: 0;
+  margin: 0;
+  background: #fff;
+  height: 100%;
+  z-index: 1;
+}
+.login form{
+margin: 160px 30px;
+}
+.login h2{
+  font-size: 30px;
+  color: #00316b;
+}
+.login label {
+  display: block;
+  font-size: : 18px;
+  font-weight: 700;
+  margin: 8px 0
+}
+.main{
+  padding-top: 55px;
+}
+.home{
+  padding-top: 10px
+}
+.home:hover{
+  background-color: #ccc;
+}
+.home label {
+  font-size: : 18px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+.singlehome{
+  padding-top: 10px
+}
+.singlehome label {
+  font-size: : 18px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+.singlehome input[type="radio"] {
+  font-size: : 18px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.form-control{
+  width: 100%;
+  padding: 8px 0;
+  font-size: 18px;
+}
+.btn{
+  margin: 18px 0;
+  display: block;
+  float: right;
+  background: #00316b;
+  font-size: 18px;
+  padding: 8px 30px;
+  color: white;
+  border: none;
+}
+.btn:hover{
+   background: #e91e63;
+}
+.singlebtn{
+  margin: 18px 0;
+  margin-left: 20px;
+  background: #00316b;
+  font-size: 18px;
+  padding: 8px 30px;
+  color: white;
+  border: none;
+}
+.singlebtn:hover{
+   background: #e91e63;
+}
+.description
+{
+padding-left: 10px;
+color: #00316b;
+}
+.result
+{
+color: green;
+}
+.resultred
+{
+color: red;
+}

@@ -1,0 +1,33 @@
+{
+  "name": "todofrontend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engine": {
+    "node": "9.3.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "hbs": "^4.0.0",
+    "moment": "^2.22.2",
+    "node-datetime": "^2.0.6",
+    "path": "^0.12.7",
+    "socket.io": "^1.4.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YashwanthThota/Todofrontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YashwanthThota/Todofrontend/issues"
+  },
+  "homepage": "https://github.com/YashwanthThota/Todofrontend#readme",
+  "description": ""
+}

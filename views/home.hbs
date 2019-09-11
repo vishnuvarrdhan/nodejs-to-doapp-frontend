@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>ToDo || Home</title>
+  </head>
+  <body>
+    <header>
+    <div id="nav">
+  </div>
+</header>
+<div class="main" >
+  {{#if notodo }}
+  <div class="home">
+    <label class="description">{{notodo}}</label>
+  </div>
+  {{/if}}
+  {{#each result}}
+  <a href="view/{{this._id}}">
+  <div class="home" id="home">
+    <label hidden>{{ this._id }}</label>
+    <label class="description">Todo:</label>
+    <label class= "result">{{ this.text }}</label></br>
+    <label class="description">Completed:</label>
+    <label class={{this.class}}>{{ this.completed }}</label></br>
+    {{#if this.completedAt }}
+    <label class="description">Completed At:</label>
+    <label class= "result">{{ this.completedAt }}</label>
+    {{/if}}
+  </div>
+{{/each}}
+</a>
+</div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function(){
+         jQuery("#nav").load("navigationbar/nav.hbs");
+     });
+// $( "label:contains('No')" ).css( "color", "red" );
+// $( "label:contains('Yes')" ).css( "color", "green" );
+  </script>
+</html>
